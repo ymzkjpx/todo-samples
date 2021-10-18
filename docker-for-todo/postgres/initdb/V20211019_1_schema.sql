@@ -1,0 +1,8 @@
+DROP SCHEMA IF EXISTS collection CASCADE ;
+CREATE SCHEMA collection;
+
+CREATE TABLE collection.material
+(
+    book_number VARCHAR (36) PRIMARY KEY ,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

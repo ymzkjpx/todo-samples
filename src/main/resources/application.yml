@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://127.0.0.1:15432/postgres?useSSL=false&characterEncoding=UTF-8
+    username: postgres
+    password: postgres
+    init:
+      encoding: utf-8
+  thymeleaf:
+    cache: false
