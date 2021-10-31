@@ -1,5 +1,6 @@
 package com.todo.domain.model.Book;
 
+import java.util.Collections;
 import java.util.List;
 
 public class Books {
@@ -13,6 +14,10 @@ public class Books {
 
     public static Books from(List<Book> source){
         return new Books(source);
+    }
+
+    public static Books empty(){
+        return Books.from(Collections.emptyList());
     }
 
     public List<Book> asList() {

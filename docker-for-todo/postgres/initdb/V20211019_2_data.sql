@@ -1,5 +1,5 @@
 INSERT INTO
-    collection.material (book_number)
+    collection.book (book_number)
 VALUES
     ('530f9ad1-f3fc-4e22-a2f7-c4eeb4e41b78')
   , ('db08a9ab-2a5e-4d23-9695-9ba5bf0d583a')
