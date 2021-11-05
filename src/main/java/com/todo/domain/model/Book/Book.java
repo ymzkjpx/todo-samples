@@ -7,15 +7,17 @@ public class Book {
     BookNumber bookNumber;
     WorkOf workOf;
     Genre genre;
+    Title title;
 
     @Deprecated
     Book() {
     }
 
-    public Book(BookNumber bookNumber, WorkOf workOf, Genre genre) {
+    public Book(BookNumber bookNumber, WorkOf workOf, Genre genre, Title title) {
         this.bookNumber = bookNumber;
         this.workOf = workOf;
         this.genre = genre;
+        this.title = title;
     }
 
     public BookNumber bookNumber() {
@@ -28,5 +30,19 @@ public class Book {
 
     public Genre genre() {
         return genre;
+    }
+
+    public Title title() {
+        return title;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "bookNumber=" + bookNumber +
+                ", workOf=" + workOf +
+                ", genre=" + genre +
+                ", title=" + title +
+                '}';
     }
 }

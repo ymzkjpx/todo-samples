@@ -1,20 +1,30 @@
 package com.todo.domain.model.Book;
 
+import java.util.UUID;
+
 /**
  * 書籍種番号
  */
 public class BookNumber {
-    String value;
+    UUID value;
 
     @Deprecated
     BookNumber() {
     }
 
-    private BookNumber(String value) {
+    private BookNumber(UUID value) {
         this.value = value;
     }
 
-    public String value() {
+    public static BookNumber from(UUID uuid){
+        return new BookNumber(uuid);
+    }
+
+    public static BookNumber fromString(String uuidAsText){
+        return new BookNumber(UUID.fromString(uuidAsText));
+    }
+
+    public UUID value() {
         return value;
     }
 

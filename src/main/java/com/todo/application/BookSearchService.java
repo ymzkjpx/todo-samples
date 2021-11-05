@@ -20,7 +20,7 @@ public class BookSearchService {
     }
 
     /**
-     * 書籍番号で検索する
+     * 書籍管理番号で検索する
      */
     public Book searchBook(BookNumber bookNumber) {
         return bookRepository.searchBook(bookNumber);
