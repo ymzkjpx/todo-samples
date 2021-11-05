@@ -9,7 +9,8 @@ public class Book {
     Genre genre;
 
     @Deprecated
-    Book(){}
+    Book() {
+    }
 
     public Book(BookNumber bookNumber, WorkOf workOf, Genre genre) {
         this.bookNumber = bookNumber;

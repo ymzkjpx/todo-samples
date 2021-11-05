@@ -7,7 +7,8 @@ public class Keyword {
     String value;
 
     @Deprecated
-    Keyword(){}
+    Keyword() {
+    }
 
     public Keyword(String value) {
         this.value = value;

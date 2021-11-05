@@ -7,7 +7,8 @@ public class BookNumber {
     String value;
 
     @Deprecated
-    BookNumber(){}
+    BookNumber() {
+    }
 
     private BookNumber(String value) {
         this.value = value;

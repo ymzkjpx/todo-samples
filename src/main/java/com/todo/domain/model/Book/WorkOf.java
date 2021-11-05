@@ -7,7 +7,8 @@ public class WorkOf {
     String value;
 
     @Deprecated
-    WorkOf(){}
+    WorkOf() {
+    }
 
     public WorkOf(String value) {
         this.value = value;
