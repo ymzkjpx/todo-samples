@@ -1,4 +1,4 @@
-package com.todo.domain.model.Book;
+package com.todo.domain.model.book;
 
 import java.util.UUID;
 
@@ -6,25 +6,25 @@ import java.util.UUID;
  * 書籍種番号
  */
 public class BookNumber {
-    UUID value;
+    String value;
 
     @Deprecated
     BookNumber() {
     }
 
-    private BookNumber(UUID value) {
+    private BookNumber(String value) {
         this.value = value;
     }
 
     public static BookNumber from(UUID uuid){
-        return new BookNumber(uuid);
+        return new BookNumber(uuid.toString());
     }
 
     public static BookNumber fromString(String uuidAsText){
-        return new BookNumber(UUID.fromString(uuidAsText));
+        return new BookNumber(UUID.fromString(uuidAsText).toString());
     }
 
-    public UUID value() {
+    public String value() {
         return value;
     }
 

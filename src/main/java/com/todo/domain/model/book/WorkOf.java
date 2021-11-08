@@ -1,16 +1,16 @@
-package com.todo.domain.model.Book;
+package com.todo.domain.model.book;
 
 /**
- * 書籍のジャンル
+ * 著者名
  */
-public class Genre {
+public class WorkOf {
     String value;
 
     @Deprecated
-    Genre() {
+    WorkOf() {
     }
 
-    public Genre(String value) {
+    public WorkOf(String value) {
         this.value = value;
     }
 
@@ -20,7 +20,7 @@ public class Genre {
 
     @Override
     public String toString() {
-        return "Genre{" +
+        return "WorkOf{" +
                 "value='" + value + '\'' +
                 '}';
     }

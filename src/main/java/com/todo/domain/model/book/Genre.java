@@ -1,16 +1,16 @@
-package com.todo.domain.model.Book;
+package com.todo.domain.model.book;
 
 /**
- * 書籍のタイトル
+ * 書籍のジャンル
  */
-public class Title {
+public class Genre {
     String value;
 
     @Deprecated
-    Title() {
+    Genre() {
     }
 
-    public Title(String value) {
+    public Genre(String value) {
         this.value = value;
     }
 
@@ -20,7 +20,7 @@ public class Title {
 
     @Override
     public String toString() {
-        return "Title{" +
+        return "Genre{" +
                 "value='" + value + '\'' +
                 '}';
     }

@@ -1,8 +1,8 @@
 package com.todo.application;
 
-import com.todo.domain.model.Book.Book;
-import com.todo.domain.model.Book.BookNumber;
-import com.todo.domain.model.Book.Books;
+import com.todo.domain.model.book.Book;
+import com.todo.domain.model.book.BookNumber;
+import com.todo.domain.model.book.Books;
 import com.todo.domain.model.keyword.Keyword;
 
 import org.springframework.stereotype.Service;
@@ -11,6 +11,10 @@ import org.springframework.stereotype.Service;
 public class BookSearchService {
 
     BookRepository bookRepository;
+
+    public BookSearchService(BookRepository bookRepository) {
+        this.bookRepository = bookRepository;
+    }
 
     /**
      * キーワードで本を検索する

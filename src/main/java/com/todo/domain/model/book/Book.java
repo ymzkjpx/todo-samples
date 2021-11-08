@@ -1,4 +1,4 @@
-package com.todo.domain.model.Book;
+package com.todo.domain.model.book;
 
 /**
  * 書籍種

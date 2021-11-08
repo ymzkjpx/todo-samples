@@ -1,16 +1,16 @@
-package com.todo.domain.model.Book;
+package com.todo.domain.model.book;
 
 /**
- * 著者名
+ * 書籍のタイトル
  */
-public class WorkOf {
+public class Title {
     String value;
 
     @Deprecated
-    WorkOf() {
+    Title() {
     }
 
-    public WorkOf(String value) {
+    public Title(String value) {
         this.value = value;
     }
 
@@ -20,7 +20,7 @@ public class WorkOf {
 
     @Override
     public String toString() {
-        return "WorkOf{" +
+        return "Title{" +
                 "value='" + value + '\'' +
                 '}';
     }

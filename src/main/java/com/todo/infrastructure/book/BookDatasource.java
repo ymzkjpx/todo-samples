@@ -1,9 +1,9 @@
 package com.todo.infrastructure.book;
 
 import com.todo.application.BookRepository;
-import com.todo.domain.model.Book.Book;
-import com.todo.domain.model.Book.BookNumber;
-import com.todo.domain.model.Book.Books;
+import com.todo.domain.model.book.Book;
+import com.todo.domain.model.book.BookNumber;
+import com.todo.domain.model.book.Books;
 import com.todo.domain.model.keyword.Keyword;
 
 import org.springframework.stereotype.Repository;
@@ -22,6 +22,8 @@ public class BookDatasource implements BookRepository {
     @Override
     public Book searchBook(BookNumber bookNumber) {
         return bookMapper.searchBookByBookNumber(bookNumber);
+//        Book result = bookMapper.searchBookByBookNumber(bookNumber);
+//        return result;
     }
 
     @Override
