@@ -22,8 +22,6 @@ public class BookDatasource implements BookRepository {
     @Override
     public Book searchBook(BookNumber bookNumber) {
         return bookMapper.searchBookByBookNumber(bookNumber);
-//        Book result = bookMapper.searchBookByBookNumber(bookNumber);
-//        return result;
     }
 
     @Override
