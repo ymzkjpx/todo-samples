@@ -3,6 +3,9 @@ package com.todo.domain.model.book;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * ブックス
+ */
 public class Books {
     List<Book> list;
 
