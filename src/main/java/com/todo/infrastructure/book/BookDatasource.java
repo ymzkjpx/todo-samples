@@ -1,6 +1,6 @@
 package com.todo.infrastructure.book;
 
-import com.todo.application.BookRepository;
+import com.todo.application.book.BookRepository;
 import com.todo.domain.model.book.Book;
 import com.todo.domain.model.book.BookNumber;
 import com.todo.domain.model.book.Books;
