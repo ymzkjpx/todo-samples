@@ -10,6 +10,4 @@ public class TopController {
     String index(){
         return "top";
     }
-
-
 }

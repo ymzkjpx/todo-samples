@@ -1,9 +1,12 @@
 package com.todo.domain.model.book;
 
+import javax.validation.constraints.NotBlank;
+
 /**
  * 著者名
  */
 public class WorkOf {
+    @NotBlank
     String value;
 
     @Deprecated

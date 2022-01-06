@@ -1,9 +1,12 @@
 package com.todo.domain.model.book;
 
+import javax.validation.constraints.NotBlank;
+
 /**
  * 書籍のタイトル
  */
 public class Title {
+    @NotBlank
     String value;
 
     @Deprecated

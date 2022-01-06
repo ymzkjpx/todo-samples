@@ -7,11 +7,14 @@ public class Keyword {
     String value;
 
     @Deprecated
-    Keyword() {
+    Keyword(){}
+
+    private Keyword(String value) {
+        this.value = value;
     }
 
-    public Keyword(String value) {
-        this.value = value;
+    public static Keyword from(String value){
+        return new Keyword(value);
     }
 
     public String value() {

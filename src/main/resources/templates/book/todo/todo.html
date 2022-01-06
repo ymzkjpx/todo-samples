@@ -12,6 +12,21 @@
         </aside>
     </article>
     <article>
+        <h2>書籍検索</h2>
+        <form action="#" th:action="@{/book/todo/}" th:method="post">
+            <input placeholder="キーワード" th:name="value" type="text">
+            <button name="" type="submit">検索</button>
+        </form>
+        <table th:if="${searchResult}">
+            <tr th:each="book: ${searchResult.asList()}">
+                <td th:text="${book.bookNumber().value()}">530f9ad1-f3fc-4e22-a2f7-c4eeb4e41b78</td>
+                <td th:text="${book.title().value()}">1984年</td>
+                <td th:text="${book.workOf().value()}">ジョージ・オーウェル</td>
+                <td th:text="${book.genre().value()}">SF小説</td>
+            </tr>
+        </table>
+    </article>
+    <article>
         <table>
             <h2>未読リスト</h2>
             <tr>

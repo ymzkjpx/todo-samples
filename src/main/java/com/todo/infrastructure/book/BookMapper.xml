@@ -3,24 +3,25 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.todo.infrastructure.book.BookMapper">
+
     <select id="searchBooksByKeyword" resultType="com.todo.domain.model.book.Book">
         SELECT
                   book.book_number AS "bookNumber.value"
-                , book.author AS "workOf.value"
-                , book.genre AS "genre.value"
-                , book.title AS "name.value"
+                , book.book_author AS "workOf.value"
+                , book.book_genre AS "genre.value"
+                , book.book_title AS "title.value"
         FROM collection.book
         WHERE
-                   (book.title LIKE '%' || #{keyword.value} || %)
-                OR (book.author LIKE '%' || #{keyword.value} || %)
+                   (book.book_title LIKE '%' || #{keyword.value} || '%')
+                OR (book.book_author LIKE '%' || #{keyword.value} || '%')
     </select>
 
     <select id="searchBookByBookNumber" resultType="com.todo.domain.model.book.Book">
         SELECT
                   book.book_number AS "bookNumber.value"
                 , book.book_author AS "workOf.value"
-                , book.title AS "title.value"
                 , book.book_genre AS "genre.value"
+                , book.book_title AS "title.value"
         FROM collection.book
         WHERE
                 book.book_number = #{bookNumber.value}

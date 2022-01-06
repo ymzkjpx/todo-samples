@@ -1,11 +1,16 @@
 package com.todo.domain.model.book;
 
+import org.springframework.lang.NonNull;
+
 import java.util.UUID;
+
+import javax.validation.constraints.NotNull;
 
 /**
  * 書籍種番号
  */
 public class BookNumber {
+    @NotNull
     String value;
 
     @Deprecated

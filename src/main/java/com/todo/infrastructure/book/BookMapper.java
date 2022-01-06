@@ -11,7 +11,7 @@ import java.util.List;
 
 @Mapper
 public interface BookMapper {
-    List<Book> searchBooksByKeyword(Keyword keyword);
+    List<Book> searchBooksByKeyword(@Param("keyword") Keyword keyword);
 
     Book searchBookByBookNumber(@Param("bookNumber") BookNumber bookNumber);
 }

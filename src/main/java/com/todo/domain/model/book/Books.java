@@ -3,12 +3,15 @@ package com.todo.domain.model.book;
 import java.util.Collections;
 import java.util.List;
 
+import javax.validation.Valid;
+
 /**
  * ブックス
  */
 public class Books {
-    List<Book> list;
+    List<@Valid Book> list;
 
+    @Deprecated
     Books() {
     }
 
