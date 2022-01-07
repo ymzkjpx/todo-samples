@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/book/search")
+@RequestMapping("/book/search/")
 public class BookSearchController {
 
     @GetMapping("/")
