@@ -35,6 +35,5 @@ public class BookDatasource implements BookRepository {
     @Override
     public void registerBook(BookRequest book) {
         bookMapper.registerBook(BookNumber.generate(), book);
-        System.out.println(1);
     }
 }

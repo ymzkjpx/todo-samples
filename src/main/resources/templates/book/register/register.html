@@ -5,33 +5,9 @@
     <title>Title</title>
 </head>
 <body>
-<h1>BookRegister</h1>
-<article>
-    <form action="#" method="post" th:action="@{/book/register/}" th:object="${bookRequest}">
-        <h2>書籍登録</h2>
-        <div th:if="${#fields.hasAnyErrors()}">
-            <ul>
-                <li th:each="err : ${#fields.allErrors()}" th:text="${err}"/>
-            </ul>
-        </div>
-        <ul>
-            <li>
-                <label th:for="title.value">タイトル</label>
-                <input th:name="title.value" type="text">
-            </li>
-            <li>
-                <label th:for="workOf.value">著者</label>
-                <input th:name="workOf.value" type="text">
-            </li>
-            <li>
-                <label th:for="genre.value">書籍ジャンル</label>
-                <input th:name="genre.value" type="text">
-            </li>
-        </ul>
-        <div>
-            <button name="" th:value="登録" type="submit">登録</button>
-        </div>
-    </form>
-</article>
+<main>
+    <h1>Book Register</h1>
+    <th:block th:replace="book/_parts/registerForm :: forRegister"/>
+</main>
 </body>
 </html>

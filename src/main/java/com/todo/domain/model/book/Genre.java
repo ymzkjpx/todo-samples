@@ -1,5 +1,6 @@
 package com.todo.domain.model.book;
 
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 /**
@@ -7,6 +8,7 @@ import javax.validation.constraints.NotNull;
  */
 public class Genre {
     @NotNull
+    @NotBlank
     String value;
 
     @Deprecated

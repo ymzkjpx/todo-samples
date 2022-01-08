@@ -11,11 +11,15 @@ public class BookRequest {
     @Valid WorkOf workOf;
     @Valid Genre genre;
 
-    public BookRequest(){}
+    private BookRequest(){}
 
     public BookRequest(Title title, WorkOf workOf, Genre genre) {
         this.title = title;
         this.workOf = workOf;
         this.genre = genre;
+    }
+
+    public static BookRequest empty() {
+        return new BookRequest();
     }
 }

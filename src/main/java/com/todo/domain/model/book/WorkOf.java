@@ -1,11 +1,13 @@
 package com.todo.domain.model.book;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 /**
  * 著者名
  */
 public class WorkOf {
+    @NotNull
     @NotBlank
     String value;
 
