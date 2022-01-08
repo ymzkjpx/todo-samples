@@ -29,6 +29,10 @@ public class BookNumber {
         return new BookNumber(UUID.fromString(uuidAsText).toString());
     }
 
+    public static BookNumber generate(){
+        return BookNumber.from(UUID.randomUUID());
+    }
+
     public String value() {
         return value;
     }

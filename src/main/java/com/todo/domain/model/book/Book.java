@@ -1,6 +1,6 @@
 package com.todo.domain.model.book;
 
-import org.springframework.validation.annotation.Validated;
+import com.todo.domain.model.book.request.BookRequest;
 
 import javax.validation.Valid;
 

@@ -3,7 +3,6 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.todo.infrastructure.book.BookMapper">
-
     <select id="searchBooksByKeyword" resultType="com.todo.domain.model.book.Book">
         SELECT
                   book.book_number AS "bookNumber.value"
@@ -26,4 +25,12 @@
         WHERE
                 book.book_number = #{bookNumber.value}
     </select>
+
+    <insert id="registerBook">
+        INSERT INTO
+                collection.book
+                (book_number ,book_author ,book_title ,book_genre)
+        VALUES
+                (#{nextNumber.value} ,#{book.workOf.value} ,#{book.title.value} ,#{book.genre.value})
+    </insert>
 </mapper>
