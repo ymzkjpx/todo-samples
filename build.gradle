@@ -2,6 +2,7 @@ buildscript {
     ext {
         springBootVersion = "2.5.5"
         springSecurityVersion = "2.6.2"
+        springSecurityTestVersion = "5.3.13.RELEASE"
         dependencyManagementVersion = "1.0.11.RELEASE"
         jigVersion = "2021.9.4"
         mybatisSpringBootStarterVersion = "2.2.0"
@@ -41,8 +42,8 @@ dependencies {
     implementation "org.mybatis.spring.boot:mybatis-spring-boot-starter:${mybatisSpringBootStarterVersion}"
     developmentOnly "org.springframework.boot:spring-boot-devtools:${springBootVersion}"
     runtimeOnly "org.postgresql:postgresql:${postgresqlVersion}"
-
-    testImplementation('com.github.irof:jig-erd:latest.release')
+    testImplementation "com.github.irof:jig-erd:latest.release"
+    testImplementation "org.springframework.security:spring-security-test:${springSecurityTestVersion}"
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude(group: 'org.junit.vintage')
     }
