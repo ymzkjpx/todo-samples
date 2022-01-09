@@ -6,6 +6,7 @@ import com.todo.domain.model.book.Books;
 import com.todo.domain.model.book.request.BookRequest;
 import com.todo.domain.model.keyword.Keyword;
 
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -56,6 +57,7 @@ public class BookTodoController {
     }
 
     @PostMapping(value = "", params = "register")
+    @PreAuthorize("hasRole('USER')")
     public String register(@ModelAttribute("bookRequest") @Validated BookRequest bookRequest,
                            BindingResult bindingResult,
                            RedirectAttributes redirectAttributes) {
