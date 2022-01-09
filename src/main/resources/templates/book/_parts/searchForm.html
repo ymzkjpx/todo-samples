@@ -15,7 +15,7 @@
             </ul>
         </div>
         <input placeholder="キーワード" th:field="${keyword.value}" type="text">
-        <button th:name="" type="submit">検索</button>
+        <button name="" type="submit">検索</button>
     </form>
     <table th:if="${searchResult}">
         <tr th:each="book: ${searchResult.asList()}">
@@ -36,7 +36,7 @@
             </ul>
         </div>
         <input placeholder="キーワード" th:field="${keyword.value}" type="text">
-        <button th:name="search" type="submit">検索</button>
+        <button name="search" type="submit">検索</button>
     </form>
     <table th:if="${searchResult}">
         <tr th:each="book: ${searchResult.asList()}">

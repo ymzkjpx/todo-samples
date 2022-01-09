@@ -5,11 +5,12 @@
     <title>Title</title>
 </head>
 <body>
-<header th:replace="_parts/layout/header::header"/>
-<main>
-    <h1>Book Search</h1>
-    <th:block th:replace="book/_parts/searchForm :: forSearch"/>
-</main>
+
+<header th:fragment="header">
+    <nav>
+        <a th:href="@{/}">Book Repository</a>
+    </nav>
+</header>
 
 </body>
 </html>

@@ -5,6 +5,7 @@
     <title>Title</title>
 </head>
 <body>
+<header th:replace="_parts/layout/header::header"/>
 <main>
     <h1>Book Register</h1>
     <th:block th:replace="book/_parts/registerForm :: forRegister"/>

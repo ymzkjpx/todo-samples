@@ -33,13 +33,13 @@ public class BookSearchController {
         return "book/search/search";
     }
 
-    @PostMapping("search")
+    @PostMapping("")
     public String search(@ModelAttribute("keyword") @Validated Keyword keyword,
                          BindingResult bindingResult,
                          Model model) {
-        if (bindingResult.hasErrors()) return "book/todo/todo";
+        if (bindingResult.hasErrors()) return "book/search/search";
         Books result = bookSearchService.searchBooks(keyword);
         model.addAttribute("searchResult", result);
-        return "book/todo/todo";
+        return "book/search/search";
     }
 }
