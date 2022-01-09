@@ -1,12 +1,11 @@
 package com.todo.presentation.web.book.register;
 
+import com.todo.TodoControllerTest;
 import com.todo.TodoDBTest;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
 
@@ -14,6 +13,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @TodoDBTest
+@TodoControllerTest
 @AutoConfigureMockMvc
 class BookRegisterControllerTest {
 
@@ -21,7 +21,6 @@ class BookRegisterControllerTest {
     MockMvc mockMvc;
 
     @Test
-    @WithMockUser(username = "test", password = "testpassword", roles = "ROLE_TEST_USER")
     void 画面が表示できること() throws Exception{
         ResultActions resultActions = mockMvc.perform(get("/book/register/"));
         resultActions.andExpect(status().isOk());

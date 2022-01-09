@@ -36,8 +36,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(AuthenticationManagerBuilder builder) throws Exception {
         builder
                 .inMemoryAuthentication()
-                .withUser("user").password(passwordEncoder.encode("userpassword")).authorities("ROLE_USER").and()
-                .withUser("admin").password(passwordEncoder.encode("adminpassword")).authorities("ROLE_ADMIN").and()
-                .withUser("test").password(passwordEncoder.encode("testpassword")).authorities("ROLE_TEST_USER");
+                .withUser("user").password(passwordEncoder.encode("userpassword")).roles("USER").and()
+                .withUser("admin").password(passwordEncoder.encode("adminpassword")).roles("ADMIN").and()
+                .withUser("test").password(passwordEncoder.encode("testpassword")).roles("TEST_USER");
     }
 }
