@@ -57,7 +57,7 @@ public class BookTodoController {
     }
 
     @PostMapping(value = "", params = "register")
-    @PreAuthorize("hasRole('USER')")
+    @PreAuthorize("isAuthenticated()")
     public String register(@ModelAttribute("bookRequest") @Validated BookRequest bookRequest,
                            BindingResult bindingResult,
                            RedirectAttributes redirectAttributes) {
