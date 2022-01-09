@@ -6,25 +6,25 @@
 </head>
 <body>
 <div th:fragment="registerFormContent">
-   <div th:if="${#fields.hasAnyErrors()}">
-      <ul>
-         <li th:each="err : ${#fields.allErrors()}" th:text="${err}"/>
-      </ul>
-   </div>
-   <ul>
-      <li>
-         <label th:for="title.value">タイトル</label>
-         <input th:name="title.value" type="text">
-      </li>
-      <li>
-         <label th:for="workOf.value">著者</label>
-         <input th:name="workOf.value" type="text">
-      </li>
-      <li>
-         <label th:for="genre.value">書籍ジャンル</label>
-         <input th:name="genre.value" type="text">
-      </li>
-   </ul>
+    <div th:if="${#fields.hasAnyErrors()}">
+        <ul>
+            <li th:each="err : ${#fields.allErrors()}" th:text="${err}"/>
+        </ul>
+    </div>
+    <ul>
+        <li>
+            <label th:for="title.value">タイトル</label>
+            <input th:name="title.value" type="text">
+        </li>
+        <li>
+            <label th:for="workOf.value">著者</label>
+            <input th:name="workOf.value" type="text">
+        </li>
+        <li>
+            <label th:for="genre.value">書籍ジャンル</label>
+            <input th:name="genre.value" type="text">
+        </li>
+    </ul>
 </div>
 
 </body>

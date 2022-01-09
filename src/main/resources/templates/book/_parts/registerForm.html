@@ -6,23 +6,23 @@
 </head>
 <body>
 <article th:fragment="forRegister">
-   <form action="#" method="post" th:action="@{/book/register/}" th:object="${bookRequest}">
-      <h2>書籍登録</h2>
-      <th:block th:replace="book/_parts/registerFormContent::registerFormContent"/>
-   </form>
-   <div>
-      <button name="" th:value="登録" type="submit">登録</button>
-   </div>
+    <form action="#" method="post" th:action="@{/book/register/}" th:object="${bookRequest}">
+        <h2>書籍登録</h2>
+        <th:block th:replace="book/_parts/registerFormContent::registerFormContent"/>
+    </form>
+    <div>
+        <button name="" th:value="登録" type="submit">登録</button>
+    </div>
 </article>
 
 <article th:fragment="forTodo">
-   <form action="#" method="post" th:action="@{/book/todo/}" th:object="${bookRequest}">
-      <h2>書籍登録</h2>
-      <th:block th:replace="book/_parts/registerFormContent::registerFormContent"/>
-      <div>
-         <button name="register" th:value="登録" type="submit">登録</button>
-      </div>
-   </form>
+    <form action="#" method="post" th:action="@{/book/todo/}" th:object="${bookRequest}">
+        <h2>書籍登録</h2>
+        <th:block th:replace="book/_parts/registerFormContent::registerFormContent"/>
+        <div>
+            <button name="register" th:value="登録" type="submit">登録</button>
+        </div>
+    </form>
 </article>
 
 </body>

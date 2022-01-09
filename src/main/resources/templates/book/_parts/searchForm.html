@@ -8,7 +8,7 @@
 
 <article th:fragment="forSearch">
     <h2>書籍検索</h2>
-    <form action="#" th:action="@{/book/search/}" method="post" th:object="${keyword}">
+    <form action="#" method="post" th:action="@{/book/search/}" th:object="${keyword}">
         <div th:if="${#fields.hasAnyErrors()}">
             <ul>
                 <li th:each="err : ${#fields.allErrors()}" th:text="${err}"/>
@@ -17,19 +17,12 @@
         <input placeholder="キーワード" th:field="${keyword.value}" type="text">
         <button name="" type="submit">検索</button>
     </form>
-    <table th:if="${searchResult}">
-        <tr th:each="book: ${searchResult.asList()}">
-            <td th:text="${book.bookNumber().value()}">530f9ad1-f3fc-4e22-a2f7-c4eeb4e41b78</td>
-            <td th:text="${book.title().value()}">1984年</td>
-            <td th:text="${book.workOf().value()}">ジョージ・オーウェル</td>
-            <td th:text="${book.genre().value()}">SF小説</td>
-        </tr>
-    </table>
+    <th:block th:replace="book/_parts/searchFormContentResult::result"/>
 </article>
 
 <article th:fragment="forTodo">
     <h2>書籍検索</h2>
-    <form action="#" th:action="@{/book/todo/}" method="post" th:object="${keyword}">
+    <form action="#" method="post" th:action="@{/book/todo/}" th:object="${keyword}">
         <div th:if="${#fields.hasAnyErrors()}">
             <ul>
                 <li th:each="err : ${#fields.allErrors()}" th:text="${err}"/>
@@ -38,14 +31,7 @@
         <input placeholder="キーワード" th:field="${keyword.value}" type="text">
         <button name="search" type="submit">検索</button>
     </form>
-    <table th:if="${searchResult}">
-        <tr th:each="book: ${searchResult.asList()}">
-            <td th:text="${book.bookNumber().value()}">530f9ad1-f3fc-4e22-a2f7-c4eeb4e41b78</td>
-            <td th:text="${book.title().value()}">1984年</td>
-            <td th:text="${book.workOf().value()}">ジョージ・オーウェル</td>
-            <td th:text="${book.genre().value()}">SF小説</td>
-        </tr>
-    </table>
+    <th:block th:replace="book/_parts/searchFormContentResult::result"/>
 </article>
 
 </body>
