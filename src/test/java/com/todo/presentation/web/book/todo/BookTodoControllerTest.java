@@ -73,6 +73,7 @@ class BookTodoControllerTest {
                         .param("workOf.value", workOfText)
                         .param("genre.value", genreText)
         );
+
         resultActions.andExpect(status().is3xxRedirection());
 
         Books result = bookSearchService.searchBooks(Keyword.from(titleText));
